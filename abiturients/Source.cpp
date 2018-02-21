@@ -46,7 +46,7 @@ void Abiturient::read(fstream &file)
 	sum = math + rus + phys;
 }
 
-//========= main ================
+//========= main ===============
 void main()
 {
 	setlocale(LC_ALL, "russian");
