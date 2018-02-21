@@ -1,4 +1,4 @@
-#include <conio.h>
+ï»¿#include <conio.h>
 #include <string>
 #include <fstream>
 #include <iostream>
@@ -70,6 +70,6 @@ void main()
 	}
 	
 	delete[] spis;
-	cout << "Íàæìèòå ëþáóþ êëàâèøó!";
+	cout << "ÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ Ð»ÑŽÐ±ÑƒÑŽ ÐºÐ»Ð°Ð²Ð¸ÑˆÑƒ!";
 	while (!_kbhit());
 }
