@@ -14,6 +14,10 @@ public:
 	Abiturient();
 	void show();
 	void read(fstream &file);
+	void show_loser(int);
+	void show_sum_treshhold(int);
+	void show_major(int);
+	void show_half(int);
 };
 
 Abiturient::Abiturient()
@@ -46,6 +50,26 @@ void Abiturient::read(fstream &file)
 	sum = math + rus + phys;
 }
 
+void Abiturient::show_loser(int pass_score)
+{
+	if (sum < pass_score) show();
+}
+
+void Abiturient::show_sum_treshhold(int score)
+{
+	if (sum >= score) show();
+}
+
+void Abiturient::show_major(int kolvo)
+{
+
+}
+
+void Abiturient::show_half(int pass_score)
+{
+	if (sum == (pass_score / 2)) show();
+}
+
 //========= main ===============
 void main()
 {
@@ -56,7 +80,7 @@ void main()
 	fstream ifs;
 	ifs.open("file.txt", ios::in);
 	Abiturient *spis;
-	int n;
+	int n, pass_score, score, kolvo;
 	ifs >> n;
 	spis = new Abiturient[n];
 	
@@ -69,6 +93,8 @@ void main()
 		spis[i].show();
 	}
 	
+
+
 	delete[] spis;
 	cout << "Нажмите любую клавишу!";
 	while (!_kbhit());
