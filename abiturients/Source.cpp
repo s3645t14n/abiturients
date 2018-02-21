@@ -70,6 +70,6 @@ void main()
 	}
 	
 	delete[] spis;
-	cout << "press any key!";
+	cout << "Нажмите любую клавишу!";
 	while (!_kbhit());
 }
